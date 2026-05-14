@@ -25,10 +25,12 @@ section, .section {
 body.index-page #blog-hero.section,
 body.index-page #blog-hero {
   padding: 0 !important;
+  overflow: visible !important;
 }
 
 body.index-page #featured-posts.featured-posts {
   padding: clamp(2.25rem, 5vw, 3.75rem) 0 clamp(2.75rem, 6vw, 4.5rem) !important;
+  overflow: visible !important;
 }
 
 body.index-page #category-section.section,
@@ -72,7 +74,7 @@ body.index-page .header-van-thumb__img {
   top: 0;
   width: 100%;
   background-color: #ffffff;
-  z-index: 1000;
+  z-index: 1010;
 }
 
 /* Hide blog-specific elements for a compact corporate look */
@@ -1304,6 +1306,27 @@ h6 {
   }
 }
 
+@media (max-width: 767px) {
+  .page-hero {
+    min-height: clamp(380px, 68svh, 620px);
+  }
+
+  .page-hero__media,
+  .page-hero:hover .page-hero__media {
+    transform: none;
+    background-position: center 30%;
+  }
+
+  .page-hero__panel::before {
+    transform: none;
+    background-position: center 30%;
+  }
+
+  .page-hero__crumbs::before {
+    background-position: center 35%;
+  }
+}
+
 /*--------------------------------------------------------------
 # Global Page Titles & Breadcrumbs (legacy)
 --------------------------------------------------------------*/
@@ -1424,6 +1447,7 @@ section,
 --------------------------------------------------------------*/
 .blog-hero {
   padding: 0 !important;
+  overflow: visible !important;
 }
 
 .blog-hero .blog-hero-slider {
@@ -1437,17 +1461,29 @@ section,
   min-height: 500px;
 }
 
-@media (max-width: 768px) {
-  .blog-hero .blog-hero-item {
-    height: 55vh;
-    min-height: 350px;
-  }
-}
-
 .blog-hero .blog-hero-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .blog-hero .swiper-slide {
+    height: auto;
+  }
+
+  .blog-hero .blog-hero-item {
+    height: auto;
+    min-height: min(72vh, 580px);
+    aspect-ratio: 3 / 4;
+    max-height: none;
+    background-color: #12151a;
+  }
+
+  .blog-hero .blog-hero-item img {
+    object-fit: cover;
+    object-position: center 36%;
+  }
 }
 
 .blog-hero .blog-hero-item::after {
@@ -1729,8 +1765,12 @@ section,
 
 @media (max-width: 575px) {
   .featured-posts .blog-image {
-    min-height: 240px;
+    min-height: 260px;
     border-radius: 18px 18px 0 0;
+  }
+
+  .featured-posts .blog-image img {
+    object-position: center 35%;
   }
 
   .featured-posts .blog-content {
