@@ -8,10 +8,45 @@
 
 @charset "UTF-8";
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
+/* Compact corporate styling */
+section, .section {
+  padding: 20px 0 !important; /* Even more compact */
+}
+
+.featured-posts {
+  padding: 30px 0 !important;
+}
+
+.section-title {
+  padding: 15px 0 !important;
+  margin-bottom: 15px !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  display: none !important;
+}
+
+.header.sticky-top {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* Hide blog-specific elements for a compact corporate look */
+.author-avatar, .post-stats, .meta-top, .meta, .publish-date, .author-details, .date, .post-meta {
+  display: none !important;
+}
+
+.author-info {
+  margin-bottom: 5px !important;
+}
+
+.blog-content h3 {
+  margin-top: 0 !important;
+}
+
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -210,7 +245,7 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Navmenu - Desktop */
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .navmenu {
     padding: 0;
   }
@@ -317,7 +352,7 @@ h6 {
 }
 
 /* Navmenu - Mobile */
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   .mobile-nav-toggle {
     background-color: color-mix(in srgb, var(--default-color) 10%, white 15%);
     color: var(--nav-color);
@@ -813,7 +848,7 @@ section,
   overflow: clip;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
 
   section,
   .section {
@@ -892,7 +927,8 @@ section,
 .blog-hero .blog-hero-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Changed from cover to prevent zoom */
+  background-color: #000; /* Add background for contain */
 }
 
 .blog-hero .blog-hero-item::after {
@@ -1074,14 +1110,15 @@ section,
 
 .featured-posts .blog-image {
   position: relative;
-  height: 280px;
+  height: 220px; /* Reduced height for better fit */
   overflow: hidden;
 }
 
 .featured-posts .blog-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Changed from cover to prevent zoom */
+  background-color: var(--surface-color);
   transition: transform 0.4s ease;
 }
 
@@ -1127,7 +1164,7 @@ section,
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
   margin-right: 15px;
   border: 3px solid color-mix(in srgb, var(--accent-color), transparent 80%);
 }
@@ -1266,7 +1303,8 @@ section,
 .category-section .hero-post .post-img img {
   width: 100%;
   aspect-ratio: 16/10;
-  object-fit: cover;
+  object-fit: contain; /* Changed from cover to prevent zoom */
+  background-color: var(--background-color);
 }
 
 .category-section .hero-post .post-content {
@@ -1370,7 +1408,7 @@ section,
 .category-section .sidebar-post .post-img img {
   width: 80px;
   height: 80px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 12px;
 }
 
@@ -1441,7 +1479,7 @@ section,
 .category-section .grid-post .post-img img {
   width: 100%;
   aspect-ratio: 16/11;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
@@ -1600,7 +1638,7 @@ section,
 .latest-posts .featured-post .featured-media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transform: scale(1);
   transition: transform 0.4s ease;
   display: block;
@@ -1741,7 +1779,8 @@ section,
   width: 100%;
   height: 100%;
   aspect-ratio: 1/1;
-  object-fit: cover;
+  object-fit: contain; /* Changed from cover to prevent zoom */
+  background-color: var(--background-color);
   border-radius: 10px;
   display: block;
   transition: transform 0.3s ease;
@@ -1818,7 +1857,8 @@ section,
 .latest-posts .card-post .post-img img {
   width: 100%;
   height: 220px;
-  object-fit: cover;
+  object-fit: contain; /* Changed from cover to prevent zoom */
+  background-color: var(--background-color);
   transition: transform 0.4s ease;
   display: block;
 }
@@ -2033,7 +2073,7 @@ section,
 .blog-details .article-hero .hero-background .hero-bg-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .blog-details .article-hero .hero-background .hero-overlay {
@@ -2815,7 +2855,7 @@ section,
   width: 180px;
   height: 180px;
   border-radius: 16px;
-  object-fit: cover;
+  object-fit: contain;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
@@ -3156,7 +3196,7 @@ section,
   width: 50px;
   height: 50px;
   border-radius: 15px;
-  object-fit: cover;
+  object-fit: contain;
   border: 3px solid var(--surface-color);
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
@@ -3492,7 +3532,7 @@ section,
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .author-profile .author-card .author-info {
@@ -3633,7 +3673,7 @@ section,
 .author-profile .author-content .content-body .featured-articles .article-card .article-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
@@ -3956,7 +3996,7 @@ section,
 .team .member-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.5s ease;
 }
 
@@ -4728,4 +4768,47 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+/*--------------------------------------------------------------
+# Services Page Section
+--------------------------------------------------------------*/
+.services-page .service-item {
+  transition: all 0.3s ease;
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 95%);
+}
+
+.services-page .service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+  border-color: var(--accent-color);
+}
+
+.services-page .service-item h3 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--heading-color);
+}
+
+.services-page .service-item .icon i {
+  color: var(--accent-color) !important;
+}
+
+.services-page .service-item ul li {
+  font-size: 14px;
+  padding: 5px 0;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.services-page .service-item ul li i {
+  color: var(--accent-color) !important;
+}
+
+.services-page .service-item h5 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
