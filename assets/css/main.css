@@ -344,23 +344,37 @@ h6 {
 .mobile-nav-contact {
   list-style: none;
   width: 100%;
-  padding: 0 1.25rem 0.75rem !important;
+  padding: 0 1.25rem 0.85rem !important;
   margin: 0 !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.mobile-nav-contact .header-topstrip--mobile {
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-  font-size: 13px;
-  font-family: var(--nav-font);
+.mobile-nav-contact .mobile-nav-figure {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 0.35rem 0 0;
+  line-height: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
 }
 
-.mobile-nav-contact .header-topstrip__link,
-.mobile-nav-contact .header-topstrip__text {
-  color: #4a5058;
-  white-space: normal;
+.mobile-nav-contact .mobile-nav-figure__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 128px;
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+@media (max-width: 380px) {
+  .mobile-nav-contact .mobile-nav-figure__img {
+    max-height: 104px;
+  }
 }
 
 @media (min-width: 992px) {
