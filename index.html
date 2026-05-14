@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Fuzzy Electronics - Linked | Integrated | Secured</title>
+  <title>Fuzzy Electronics — Smart Security, Smart Solutions</title>
   <meta name="description" content="Fuzzy Electronics specializes in advanced electronic security systems, providing integrated and secured solutions for modern enterprises.">
   <meta name="keywords" content="CCTV, Access Control, Fire Alarm, Intrusion Detection, Security Systems, Fuzzy Electronics">
 
@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/fuzzy/monitoring_center.jpeg" fetchpriority="high">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -37,18 +38,40 @@
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container position-relative d-flex align-items-center justify-content-between">
+  <div class="header-shell sticky-top">
+  <div class="header-topstrip" aria-label="Business contact">
+    <div class="container-fluid px-3 px-md-4 px-xl-5">
+      <div class="header-topstrip__inner">
+        <a href="mailto:marketing@fuzzy.com" class="header-topstrip__link"><i class="bi bi-envelope-fill" aria-hidden="true"></i><span>marketing@fuzzy.com</span></a>
+        <a href="tel:+2638677008879" class="header-topstrip__link"><i class="bi bi-telephone-fill" aria-hidden="true"></i><span>+263 867 700 8879</span></a>
+        <span class="header-topstrip__text"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span>9 Belfast Road, Emerald Hill</span></span>
+      </div>
+    </div>
+  </div>
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid header-bar px-3 px-md-4 px-xl-5 position-relative d-flex align-items-center justify-content-between gap-3 flex-nowrap">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="assets/img/logo.jpeg" alt="Fuzzy Electronics Logo" class="header-logo">
-      </a>
+      <div class="d-flex align-items-center flex-shrink-0 me-auto me-xl-0 gap-2 gap-md-3">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo.jpeg" alt="Fuzzy Electronics Logo" class="header-logo">
+        </a>
+        <a href="contact.html" class="header-van-thumb d-flex d-md-none align-items-center" title="Field support &amp; service fleet" aria-label="Field support and service vehicles">
+          <img src="assets/img/fuzzy/service_van.jpeg" alt="" class="header-van-thumb__img" width="72" height="54" loading="lazy" decoding="async">
+        </a>
+      </div>
 
-      <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu flex-shrink-0 ms-xl-2">
         <ul>
           <li class="d-lg-none mobile-nav-brand">
             <img src="assets/img/logo.jpeg" alt="Fuzzy Electronics">
-            <p>Linked | Integrated | Secured</p>
+            <p>Smart Security • Smart Solutions • Trusted Technology</p>
+          </li>
+          <li class="d-lg-none mobile-nav-contact">
+            <div class="header-topstrip--mobile" aria-label="Business contact">
+              <a href="mailto:marketing@fuzzy.com" class="header-topstrip__link"><i class="bi bi-envelope-fill" aria-hidden="true"></i><span>marketing@fuzzy.com</span></a>
+              <a href="tel:+2638677008879" class="header-topstrip__link"><i class="bi bi-telephone-fill" aria-hidden="true"></i><span>+263 867 700 8879</span></a>
+              <span class="header-topstrip__text"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span>9 Belfast Road, Emerald Hill</span></span>
+            </div>
           </li>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -57,8 +80,8 @@
           <li><a href="contact.html">Contact</a></li>
           <li class="d-lg-none mobile-nav-socials">
             <div class="social-links">
-              <a href="https://www.facebook.com/FuzzyHoldings"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.linkedin.com/search/results/all/?keywords=Fuzzy%20Electronics&origin=ENTITY_SEARCH_HOME_HISTORY&heroEntityKey=urn%3Ali%3Aorganization%3A2702406"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.facebook.com/FuzzyHoldings" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.linkedin.com/company/2702406/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
             </div>
           </li>
         </ul>
@@ -69,13 +92,15 @@
         </div>
       </nav>
 
-      <div class="header-social-links">
-        <a href="https://www.facebook.com/FuzzyHoldings" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.linkedin.com/search/results/all/?keywords=Fuzzy%20Electronics&origin=ENTITY_SEARCH_HOME_HISTORY&heroEntityKey=urn%3Ali%3Aorganization%3A2702406" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <div class="header-social-links flex-shrink-0">
+        <a href="https://www.facebook.com/FuzzyHoldings" class="header-social-btn header-social-btn--facebook" target="_blank" rel="noopener noreferrer" aria-label="Fuzzy Electronics on Facebook"><i class="bi bi-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+        <a href="https://www.linkedin.com/company/2702406/" class="header-social-btn header-social-btn--linkedin" target="_blank" rel="noopener noreferrer" aria-label="Fuzzy Electronics on LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
       </div>
 
     </div>
   </header>
+
+  </div>
 
   <main class="main">
 
@@ -87,11 +112,11 @@
         <div class="blog-hero-slider swiper init-swiper">
           <script type="application/json" class="swiper-config">
             {
-              "loop": true,
-              "speed": 1000,
+              "loop": false,
+              "speed": 650,
               "effect": "fade",
               "autoplay": {
-                "delay": 5000
+                "delay": 4200
               },
               "slidesPerView": 1,
               "navigation": {
@@ -105,7 +130,7 @@
 
             <div class="swiper-slide">
               <div class="blog-hero-item">
-                <img src="assets/img/fuzzy/monitoring_center.jpeg" alt="Analytics Monitoring" class="img-fluid">
+                <img src="assets/img/fuzzy/monitoring_center.jpeg" alt="Analytics Monitoring" class="img-fluid" decoding="async" fetchpriority="high">
                 <div class="blog-hero-content">
                   <span class="category">Analytics</span>
                   <h1>Advanced AI-Powered Video Analytics & Monitoring</h1>
@@ -114,21 +139,6 @@
                     <span class="date">Established 2002</span>
                   </div>
                   <a href="category.html" class="read-more">Explore Solutions <i class="bi bi-arrow-right"></i></a>
-                </div>
-              </div>
-            </div><!-- End slide item -->
-
-            <div class="swiper-slide">
-              <div class="blog-hero-item">
-                <img src="assets/img/fuzzy/service_van.jpeg" alt="Professional Support" class="img-fluid">
-                <div class="blog-hero-content">
-                  <span class="category">Support</span>
-                  <h1>24/7 Professional Technical Support & Maintenance</h1>
-                  <div class="meta">
-                    <span class="author">SYSTEMS BY <a href="#">Fuzzy Electronics</a></span>
-                    <span class="date">Established 2002</span>
-                  </div>
-                  <a href="contact.html" class="read-more">Get Support <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div><!-- End slide item -->
@@ -153,27 +163,31 @@
         <p>Comprehensive Electronic Systems Tailored for Your Security</p>
       </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container-fluid px-3 px-md-4 px-xl-5" data-aos="fade-up" data-aos-delay="100">
 
         <div class="blog-posts-slider swiper init-swiper">
           <script type="application/json" class="swiper-config">
             {
               "loop": true,
-              "speed": 600,
+              "speed": 420,
               "autoplay": {
-                "delay": 4500
+                "delay": 3800
               },
-              "slidesPerView": 1,
-              "spaceBetween": 40,
+              "slidesPerView": 1.08,
+              "spaceBetween": 16,
               "centeredSlides": true,
               "breakpoints": {
+                "576": {
+                  "slidesPerView": 1.12,
+                  "spaceBetween": 18
+                },
                 "768": {
-                  "slidesPerView": 1.5,
-                  "spaceBetween": 30
+                  "slidesPerView": 1.45,
+                  "spaceBetween": 22
                 },
                 "1200": {
-                  "slidesPerView": 2.2,
-                  "spaceBetween": 40
+                  "slidesPerView": 2.15,
+                  "spaceBetween": 28
                 }
               },
               "pagination": {
@@ -185,9 +199,9 @@
 
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <article class="blog-card">
+              <article class="blog-card blog-card--core">
                 <div class="blog-image">
-                  <img src="assets/img/fuzzy/biometric_access.jpeg" alt="Access Control" loading="lazy">
+                  <img src="assets/img/fuzzy/biometric_access.jpeg" alt="Access Control" loading="lazy" decoding="async">
                   <div class="category-badge">Access Control</div>
                 </div>
                 <div class="blog-content">
@@ -205,9 +219,9 @@
             </div><!-- End slide item -->
 
             <div class="swiper-slide">
-              <article class="blog-card">
+              <article class="blog-card blog-card--core">
                 <div class="blog-image">
-                  <img src="assets/img/fuzzy/cctv_cameras.jpeg" alt="CCTV" loading="lazy">
+                  <img src="assets/img/fuzzy/cctv_cameras.jpeg" alt="CCTV" loading="lazy" decoding="async">
                   <div class="category-badge">Surveillance</div>
                 </div>
                 <div class="blog-content">
@@ -225,9 +239,9 @@
             </div><!-- End slide item -->
 
             <div class="swiper-slide">
-              <article class="blog-card">
+              <article class="blog-card blog-card--core">
                 <div class="blog-image">
-                  <img src="assets/img/fuzzy/alarm_system.jpeg" alt="Fire Systems" loading="lazy">
+                  <img src="assets/img/fuzzy/alarm_system.jpeg" alt="Fire Systems" loading="lazy" decoding="async">
                   <div class="category-badge">Fire Safety</div>
                 </div>
                 <div class="blog-content">
@@ -245,9 +259,9 @@
             </div><!-- End slide item -->
 
             <div class="swiper-slide">
-              <article class="blog-card">
+              <article class="blog-card blog-card--core">
                 <div class="blog-image">
-                  <img src="assets/img/fuzzy/electric_fence.jpeg" alt="Intrusion Detection" loading="lazy">
+                  <img src="assets/img/fuzzy/electric_fence.jpeg" alt="Intrusion Detection" loading="lazy" decoding="async">
                   <div class="category-badge">Alarms</div>
                 </div>
                 <div class="blog-content">
@@ -265,9 +279,9 @@
             </div><!-- End slide item -->
 
             <div class="swiper-slide">
-              <article class="blog-card">
+              <article class="blog-card blog-card--core">
                 <div class="blog-image">
-                  <img src="assets/img/fuzzy/gate_automation.jpeg" alt="Gate Automation" loading="lazy">
+                  <img src="assets/img/fuzzy/gate_automation.jpeg" alt="Gate Automation" loading="lazy" decoding="async">
                   <div class="category-badge">Automation</div>
                 </div>
                 <div class="blog-content">
@@ -308,7 +322,7 @@
           <div class="col-lg-8">
             <article class="hero-post" data-aos="zoom-out" data-aos-delay="200">
               <div class="post-img">
-                <img src="assets/img/fuzzy/triple-security-cameras-pole-highdefinition-surveillance-system.png" alt="High-Definition Surveillance System" class="img-fluid" loading="lazy">
+                <img src="assets/img/fuzzy/cctv_cameras.jpeg" alt="High-Definition Surveillance System" class="img-fluid" loading="lazy">
               </div>
               <div class="post-content">
                   <span class="publish-date">Trusted Security Solutions</span>
@@ -368,20 +382,6 @@
                 </div>
               </article>
 
-              <article class="sidebar-post" data-aos="fade-left" data-aos-delay="600">
-                <div class="post-img">
-                  <img src="assets/img/fuzzy/intrusion_detection.jpeg" alt="Intrusion Detection" class="img-fluid" loading="lazy">
-                </div>
-                <div class="post-content">
-                  <span class="post-category">Infrastructure</span>
-                  <h4 class="title">
-                    <a href="#">Data Center Security and Environmental Monitoring</a>
-                  </h4>
-                  <div class="post-meta">
-                    <span class="post-date">Systems Reliability</span>
-                  </div>
-                </div>
-              </article>
             </div>
           </div>
         </div>
@@ -574,60 +574,6 @@
             </div>
           </div><!-- End Right Column -->
 
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <article class="card-post h-100">
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/fuzzy/gate_automation.jpeg" class="img-fluid w-100" alt="CCTV Systems" loading="lazy">
-              </div>
-              <div class="content">
-                <div class="meta d-flex align-items-center flex-wrap gap-2">
-                  <span class="cat-badge">Technology</span>
-                  <div class="d-flex align-items-center ms-auto">
-                    <i class="bi bi-person"></i><span class="ps-2">Engineering Team</span>
-                  </div>
-                </div>
-                <h3 class="title">The Impact of AI on Real-Time Surveillance</h3>
-                <a href="#"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
-              </div>
-            </article>
-          </div><!-- End Grid Post -->
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="250">
-            <article class="card-post h-100">
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/fuzzy/intercom_system.jpeg" class="img-fluid w-100" alt="Biometric Access" loading="lazy">
-              </div>
-              <div class="content">
-                <div class="meta d-flex align-items-center flex-wrap gap-2">
-                  <span class="cat-badge">Security</span>
-                  <div class="d-flex align-items-center ms-auto">
-                    <i class="bi bi-person"></i><span class="ps-2">Systems Team</span>
-                  </div>
-                </div>
-                <h3 class="title">Advanced Biometrics: The Future of Access Control</h3>
-                <a href="#"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
-              </div>
-            </article>
-          </div><!-- End Grid Post -->
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <article class="card-post h-100">
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/fuzzy/monitoring_center.jpeg" class="img-fluid w-100" alt="Building Automation" loading="lazy">
-              </div>
-              <div class="content">
-                <div class="meta d-flex align-items-center flex-wrap gap-2">
-                  <span class="cat-badge">Innovation</span>
-                  <div class="d-flex align-items-center ms-auto">
-                    <i class="bi bi-person"></i><span class="ps-2">R&D Department</span>
-                  </div>
-                </div>
-                <h3 class="title">Integrating Smart Building Automation Systems</h3>
-                <a href="#"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
-              </div>
-            </article>
-          </div><!-- End Grid Post -->
-
         </div>
 
       </div>
@@ -646,11 +592,11 @@
             <a href="index.html" class="logo d-flex align-items-center mb-3">
               <span class="sitename">Fuzzy Electronics</span>
             </a>
-            <p class="tagline">Linked | Integrated | Secured. Providing world-class electronic security systems since 2002.</p>
+            <p class="tagline">Smart Security • Smart Solutions • Trusted Technology. Providing world-class electronic security systems since 2002.</p>
 
             <div class="social-links mt-4">
               <a href="https://www.facebook.com/FuzzyHoldings" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.linkedin.com/search/results/all/?keywords=Fuzzy%20Electronics&origin=ENTITY_SEARCH_HOME_HISTORY&heroEntityKey=urn%3Ali%3Aorganization%3A2702406" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.linkedin.com/company/2702406/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
@@ -661,8 +607,8 @@
               <div class="col-6 col-md-4">
                 <h5>Company</h5>
                 <ul class="list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Our Team</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="category.html">Solutions</a></li>
                   <li><a href="#">Careers</a></li>
                   <li><a href="#">Newsroom</a></li>
                 </ul>
@@ -706,11 +652,7 @@
             <div class="footer-bottom-content">
               <p class="mb-0">© <strong>Fuzzy Electronics</strong>. All rights reserved.</p>
               <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you've purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
+                Designed by <a href="https://fluxi.agency" target="_blank" rel="noopener noreferrer">Fluxi.agency</a>
               </div>
             </div>
           </div>
