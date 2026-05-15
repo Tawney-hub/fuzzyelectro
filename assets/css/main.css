@@ -610,12 +610,12 @@ h6 {
   .navmenu a,
   .navmenu a:focus {
     color: #1e232b;
-    padding: 20px;
+    padding: 12px 20px; /* Reduced padding from 20px */
     font-family: var(--heading-font);
-    font-size: 28px;
+    font-size: 18px; /* Reduced font size from 28px */
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     display: block;
     width: 100%;
     text-align: center;
@@ -653,7 +653,7 @@ h6 {
 
   .mobile-nav-brand {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px; /* Reduced from 40px */
   }
 
   .mobile-nav-brand img {
@@ -674,9 +674,9 @@ h6 {
   }
 
   .mobile-nav-socials {
-    margin-top: 40px;
+    margin-top: 20px; /* Reduced from 40px */
     border-top: 1px solid rgba(0, 0, 0, 0.08);
-    padding-top: 30px;
+    padding-top: 20px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -1300,7 +1300,26 @@ h6 {
   }
 
   .page-hero__inner {
-    padding: 1rem 0 0;
+    padding: 1rem 0 2.5rem; /* Increased padding from bottom */
+  }
+
+  .page-hero__panel::after {
+    background: rgba(255, 255, 255, 0.92); /* Reverted to white background */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .page-hero__title {
+    color: #161a22 !important; /* Reverted to black text */
+    text-shadow: none !important;
+  }
+
+  .page-hero__eyebrow {
+    color: #5c6570 !important;
+  }
+
+  .page-hero__lead {
+    color: #3d4450 !important;
   }
 
   .page-hero__panel::before {
@@ -1469,7 +1488,7 @@ section,
   }
 
   .blog-hero .blog-hero-item img {
-    object-fit: contain;
+    object-fit: cover; /* Changed from contain to cover to fill space */
     object-position: center center;
   }
 }
