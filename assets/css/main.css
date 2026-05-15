@@ -1299,6 +1299,12 @@ h6 {
     display: none !important; /* Removed hero sections on mobile as requested */
   }
 
+  /* Hide home page intro headings on mobile to jump straight to content */
+  #featured-posts .section-title,
+  #featured-posts .section-intro {
+    display: none !important;
+  }
+
   section, .section {
     padding: 8px 0 !important; /* Minimized section spacing on mobile */
   }
@@ -1306,6 +1312,15 @@ h6 {
   .section-title {
     padding: 5px 0 !important;
     margin-bottom: 5px !important;
+  }
+
+  /* Pull pagination dots even closer to cards */
+  .featured-posts .swiper-pagination {
+    bottom: -10px !important; 
+  }
+
+  .featured-posts .swiper {
+    padding-bottom: 25px !important;
   }
 
   .page-hero__media,
