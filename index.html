@@ -63,11 +63,6 @@
             <img src="assets/img/logo.jpeg" alt="Fuzzy Electronics">
             <p>Smart Security • Smart Solutions • Trusted Technology</p>
           </li>
-          <li class="d-lg-none mobile-nav-contact">
-            <div class="mobile-nav-figure">
-              <img src="assets/img/fuzzy/service_van.jpeg" alt="Fuzzy Electronics mobile service fleet" class="mobile-nav-figure__img" width="720" height="480" loading="lazy" decoding="async">
-            </div>
-          </li>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
@@ -108,15 +103,20 @@
           <script type="application/json" class="swiper-config">
             {
               "loop": true,
-              "speed": 650,
+              "speed": 600,
               "effect": "fade",
               "autoplay": {
-                "delay": 4200
+                "delay": 5000,
+                "disableOnInteraction": false
               },
               "slidesPerView": 1,
               "navigation": {
                 "nextEl": ".swiper-button-next",
                 "prevEl": ".swiper-button-prev"
+              },
+              "pagination": {
+                "el": ".blog-hero__pagination",
+                "clickable": true
               }
             }
           </script>
@@ -140,7 +140,7 @@
 
             <div class="swiper-slide">
               <div class="blog-hero-item">
-                <img src="assets/img/fuzzy/service_van.jpeg" alt="On-site technical support" class="img-fluid" loading="lazy" decoding="async">
+                <img src="assets/img/fuzzy/integrated_security.jpeg" alt="Integrated security installation" class="img-fluid" loading="lazy" decoding="async">
                 <div class="blog-hero-content">
                   <span class="category">Support</span>
                   <h1>Rapid On-Site Installation &amp; Maintenance</h1>
@@ -155,7 +155,7 @@
 
             <div class="swiper-slide">
               <div class="blog-hero-item">
-                <img src="assets/img/fuzzy/service_van.jpeg" alt="Security systems service vehicle" class="img-fluid" loading="lazy" decoding="async">
+                <img src="assets/img/fuzzy/monitoring_center.jpeg" alt="Security operations and monitoring" class="img-fluid" loading="lazy" decoding="async">
                 <div class="blog-hero-content">
                   <span class="category">Response</span>
                   <h1>Trusted Teams for Electronic Security Projects</h1>
@@ -170,7 +170,9 @@
 
           </div>
 
-
+          <div class="swiper-button-prev" aria-label="Previous slide"></div>
+          <div class="swiper-button-next" aria-label="Next slide"></div>
+          <div class="swiper-pagination blog-hero__pagination"></div>
 
         </div>
 
@@ -196,7 +198,7 @@
               "loop": true,
               "speed": 420,
               "autoplay": {
-                "delay": 3800
+                "delay": 4800
               },
               "slidesPerView": 1.08,
               "spaceBetween": 16,
@@ -347,7 +349,7 @@
           <div class="col-lg-8">
             <article class="hero-post" data-aos="zoom-out" data-aos-delay="200">
               <div class="post-img">
-                <img src="assets/img/fuzzy/cctv_cameras.jpeg" alt="High-Definition Surveillance System" class="img-fluid" loading="lazy">
+                <img src="assets/img/fuzzy/triple-security-cameras-pole-highdefinition-surveillance-system.png" alt="High-Definition Surveillance System" class="img-fluid" loading="lazy">
               </div>
               <div class="post-content">
                   <span class="publish-date">Trusted Security Solutions</span>
@@ -364,7 +366,7 @@
             <div class="sidebar-posts">
               <article class="sidebar-post" data-aos="fade-left" data-aos-delay="300">
                 <div class="post-img">
-                  <img src="assets/img/fuzzy/smart_automation.jpeg" alt="Smart Automation" class="img-fluid" loading="lazy">
+                  <img src="assets/img/fuzzy/intercom_system.jpeg" alt="Communications and IoT networks" class="img-fluid" loading="lazy">
                 </div>
                 <div class="post-content">
                   <span class="post-category">Innovation</span>
@@ -394,7 +396,7 @@
 
               <article class="sidebar-post" data-aos="fade-left" data-aos-delay="500">
                 <div class="post-img">
-                  <img src="assets/img/fuzzy/security_management.jpeg" alt="Security Management" class="img-fluid" loading="lazy">
+                  <img src="assets/img/fuzzy/biometric_access.jpeg" alt="Enterprise access control" class="img-fluid" loading="lazy">
                 </div>
                 <div class="post-content">
                   <span class="post-category">Control</span>
@@ -532,7 +534,7 @@
           <div class="col-lg-7" data-aos="zoom-in" data-aos-delay="150">
             <article class="featured-post position-relative h-100">
               <figure class="featured-media m-0">
-                <img src="assets/img/fuzzy/intrusion_detection.jpeg" alt="Featured Project" class="img-fluid w-100" loading="lazy">
+                <img src="assets/img/fuzzy/alarm_system.jpeg" alt="IoT and sensor technology" class="img-fluid w-100" loading="lazy">
               </figure>
 
               <div class="featured-content">
@@ -566,7 +568,7 @@
               <div class="col-12" data-aos="fade-left" data-aos-delay="200">
                 <article class="compact-post h-100">
                   <div class="thumb">
-                    <img src="assets/img/fuzzy/fire_alarm_system.jpeg" class="img-fluid" alt="CCTV Deployment" loading="lazy">
+                    <img src="assets/img/fuzzy/cctv_cameras.jpeg" class="img-fluid" alt="Cloud video management" loading="lazy">
                   </div>
                   <div class="content">
                     <div class="meta">
@@ -583,7 +585,7 @@
               <div class="col-12" data-aos="fade-left" data-aos-delay="300">
                 <article class="compact-post h-100">
                   <div class="thumb">
-                    <img src="assets/img/fuzzy/smart_automation.jpeg" class="img-fluid" alt="Electric Fence" loading="lazy">
+                    <img src="assets/img/fuzzy/electric_fence.jpeg" class="img-fluid" alt="Perimeter electric fencing" loading="lazy">
                   </div>
                   <div class="content">
                     <div class="meta">
@@ -694,14 +696,14 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/vendor/php-email-form/validate.js" defer></script>
+  <script src="assets/vendor/aos/aos.js" defer></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" defer></script>
 
 </body>
 
