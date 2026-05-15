@@ -61,11 +61,11 @@ body.index-page #latest-posts.section {
 }
 
 .main {
-  margin-top: 70px; /* Reduced from 85px to match header height more closely */
+  margin-top: 60px; /* Precise height of the fixed header */
 }
 
 body.index-page .main {
-  margin-top: 60px; /* Even tighter for home page slider */
+  margin-top: 60px;
 }
 
 @media (max-width: 991px) {
