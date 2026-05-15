@@ -1276,43 +1276,117 @@ h6 {
   color: #c5cad3;
 }
 
-@media (max-width: 575px) {
+/* ── Mobile page-hero: white frosted glass card on photo background ── */
+@media (max-width: 767px) {
   .page-hero {
-    min-height: clamp(260px, 55vw, 340px);
-  }
-
-  .page-hero__panel {
-    border-radius: 14px;
-    padding: 1.25rem 1rem;
-    margin: 0 0.75rem;
-    max-width: 100%;
-  }
-
-  .page-hero__title {
-    font-size: clamp(1.35rem, 6.5vw, 1.75rem);
-    margin-bottom: 0.5rem;
-  }
-
-  .page-hero__lead {
-    font-size: clamp(0.82rem, 3.6vw, 0.95rem);
-    line-height: 1.55;
-  }
-
-  .page-hero__eyebrow {
-    font-size: 10px;
-    margin-bottom: 0.4rem;
+    min-height: clamp(340px, 72vw, 430px);
   }
 
   .page-hero__inner {
-    padding: 0.75rem 0 0;
+    padding: 1.5rem 0 0;
   }
 
+  /* Let the background photo show clearly with just a gentle grey tint */
+  .page-hero__media {
+    opacity: 0.90;
+  }
+
+  .page-hero__veil {
+    background: linear-gradient(
+      180deg,
+      rgba(20, 22, 28, 0.10) 0%,
+      rgba(20, 22, 28, 0.05) 50%,
+      rgba(20, 22, 28, 0.22) 100%
+    );
+  }
+
+  /* Hide the dark duplicated image inside the panel on mobile */
+  .page-hero__panel::before {
+    display: none;
+  }
+
+  /* White frosted glass card — NOT dark at all */
+  .page-hero__panel::after {
+    background: rgba(245, 247, 250, 0.86);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
+
+  /* Panel card: spacious, clean, rounded */
+  .page-hero__panel {
+    border-radius: 20px;
+    padding: 1.75rem 1.35rem 1.55rem;
+    margin: 0 1rem;
+    max-width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    box-shadow:
+      0 16px 48px rgba(0, 0, 0, 0.14),
+      0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Dark text on light card */
+  .page-hero__eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.26em;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color, #c0392b); /* brand red eyebrow */
+    text-shadow: none;
+  }
+
+  .page-hero__title {
+    font-size: clamp(1.45rem, 6.8vw, 1.85rem);
+    margin-bottom: 0.55rem;
+    line-height: 1.2;
+    color: #111827; /* near-black navy */
+    text-shadow: none;
+  }
+
+  .page-hero__lead {
+    font-size: clamp(0.82rem, 3.6vw, 0.96rem);
+    line-height: 1.6;
+    color: #374151; /* medium grey */
+    text-shadow: none;
+  }
+
+  /* Breadcrumb strip: white bar with dark text */
   .page-hero__crumbs {
-    padding: 0.65rem 0;
+    padding: 0.75rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .page-hero__crumbs::before {
+    display: none;
+  }
+
+  .page-hero__crumbs::after {
+    background: rgba(248, 249, 251, 0.96);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
 
   .page-hero__crumbs ol {
     font-size: 12px;
+  }
+
+  .page-hero__crumbs ol li {
+    color: #6b7280;
+  }
+
+  .page-hero__crumbs ol li a {
+    color: #374151;
+  }
+
+  .page-hero__crumbs ol li a:hover {
+    color: var(--accent-color, #c0392b);
+  }
+
+  .page-hero__crumbs ol li.current {
+    color: #111827;
+    font-weight: 600;
+  }
+
+  .page-hero__crumbs ol li+li::before {
+    color: #9ca3af;
   }
 }
 
@@ -1347,10 +1421,13 @@ h6 {
   }
 
   .blog-hero .blog-hero-item img {
-    border-radius: 32px;
+    border-radius: 24px;
     height: auto;
-    aspect-ratio: 16 / 10;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    aspect-ratio: 4 / 3; /* Nearly square on small phones */
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
   }
 
   .blog-hero .blog-hero-item::after {
