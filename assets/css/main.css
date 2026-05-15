@@ -23,6 +23,18 @@ section, .section {
   display: none !important;
 }
 
+.featured-posts .swiper-pagination {
+  bottom: 0 !important; /* Move dots up */
+}
+
+.featured-posts.section {
+  padding-bottom: 5px !important; /* Reduced space below dots */
+}
+
+#category-section.section {
+  padding-top: 5px !important; /* Reduced space above title */
+}
+
 body.index-page #blog-hero.section,
 body.index-page #blog-hero {
   padding: 0 !important;
@@ -58,7 +70,7 @@ body.index-page .main {
 
 @media (max-width: 991px) {
   .main, body.index-page .main {
-    margin-top: 56px;
+    margin-top: 56px; /* Flush with header */
   }
 }
 
@@ -1283,8 +1295,17 @@ h6 {
 }
 
 @media (max-width: 767px) {
-  .page-hero {
-    min-height: 180px; /* Reduced to half-size look */
+  .page-hero, .blog-hero {
+    display: none !important; /* Removed hero sections on mobile as requested */
+  }
+
+  section, .section {
+    padding: 8px 0 !important; /* Minimized section spacing on mobile */
+  }
+
+  .section-title {
+    padding: 5px 0 !important;
+    margin-bottom: 5px !important;
   }
 
   .page-hero__media,
