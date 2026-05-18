@@ -63,7 +63,7 @@ const Header = () => {
 
       {/* Main Nav Bar */}
       <header id="header" className={`header d-flex align-items-center${isScrolled ? ' header-scrolled shadow-sm' : ''}`}>
-        <div className="container-fluid header-bar px-3 px-md-5 d-flex align-items-center justify-content-between w-100">
+        <div className="container header-bar d-flex align-items-center justify-content-between w-100">
 
           <Link to="/" className="logo d-flex align-items-center">
             <img
@@ -74,37 +74,37 @@ const Header = () => {
             />
           </Link>
 
-          <div className="d-flex align-items-center gap-4">
-            <nav id="navmenu" className={`navmenu${mobileNavActive ? ' active' : ''}`}>
-              <div className="mobile-nav-brand d-lg-none">
-                <img src="/assets/img/logo.jpeg" alt="Fuzzy Electronics" />
-                <p>Smart Security • Smart Solutions • Trusted Technology</p>
+          <nav id="navmenu" className={`navmenu${mobileNavActive ? ' active' : ''}`}>
+            <div className="mobile-nav-brand d-lg-none">
+              <img src="/assets/img/logo.jpeg" alt="Fuzzy Electronics" />
+              <p>Smart Security • Smart Solutions • Trusted Technology</p>
+            </div>
+            <ul>
+              {[
+                { path: '/', label: 'Home' },
+                { path: '/services', label: 'Products and Services' },
+                { path: '/about', label: 'About' },
+                { path: '/#news', label: 'News & Blogs' },
+                { path: '/contact', label: 'Contact' }
+              ].map(({ path, label }) => (
+                <li key={label}>
+                  {label === 'News & Blogs' ? (
+                    <a href="/#news" className={location.pathname === '/' ? 'active' : ''}>{label}</a>
+                  ) : (
+                    <Link to={path} className={location.pathname === path ? 'active' : ''}>{label}</Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+            <div className="mobile-nav-socials d-lg-none">
+              <div className="social-links">
+                <a href="#" aria-label="Facebook"><i className="bi bi-facebook"></i></a>
+                <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
               </div>
-              <ul>
-                {[
-                  { path: '/', label: 'Home' },
-                  { path: '/services', label: 'Products and Services' },
-                  { path: '/about', label: 'About' },
-                  { path: '/#news', label: 'News & Blogs' },
-                  { path: '/contact', label: 'Contact' }
-                ].map(({ path, label }) => (
-                  <li key={label}>
-                    {label === 'News & Blogs' ? (
-                      <a href="/#news" className={location.pathname === '/' ? 'active' : ''}>{label}</a>
-                    ) : (
-                      <Link to={path} className={location.pathname === path ? 'active' : ''}>{label}</Link>
-                    )}
-                  </li>
-                ))}
-              </ul>
-              <div className="mobile-nav-socials d-lg-none">
-                <div className="social-links">
-                  <a href="#" aria-label="Facebook"><i className="bi bi-facebook"></i></a>
-                  <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </nav>
+            </div>
+          </nav>
 
+          <div className="d-flex align-items-center gap-3">
             <div className="header-social-links d-none d-md-flex align-items-center gap-2">
               <a href="#" className="header-social-btn facebook" aria-label="Facebook">
                 <i className="bi bi-facebook"></i>
@@ -121,7 +121,7 @@ const Header = () => {
             </div>
 
             <i
-              className={`mobile-nav-toggle d-xl-none bi ${mobileNavActive ? 'bi-x' : 'bi-list'} ms-2`}
+              className={`mobile-nav-toggle d-lg-none bi ${mobileNavActive ? 'bi-x' : 'bi-list'} ms-2`}
               onClick={toggleMobileNav}
             ></i>
           </div>

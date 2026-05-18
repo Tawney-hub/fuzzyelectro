@@ -73,7 +73,6 @@ function App() {
         <div className="float-actions">
           <a href="https://wa.me/263789566578" target="_blank" rel="noreferrer" className="float-action float-action--contact" aria-label="WhatsApp Fuzzy Electronics">
             <i className="bi bi-whatsapp"></i>
-            <span>Get In Touch</span>
           </a>
         </div>
       </div>

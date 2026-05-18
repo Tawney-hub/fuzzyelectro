@@ -7644,7 +7644,7 @@ html:not(.no-js) [data-aos].aos-animate {
    the full-screen fixed overlay visible at all times, making the page appear
    blank on mobile. Override it back to hidden unless the nav is actually open.
    ─────────────────────────────────────────────────────────────────────────── */
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   .navmenu ul {
     display: none !important;
   }
@@ -7655,47 +7655,45 @@ html:not(.no-js) [data-aos].aos-animate {
   }
 }
 
-/* ── Mobile header + hero seamless transition ────────────────────────────────
-   On mobile the header sits as an opaque white block above the hero, creating
-   a hard visual break. Instead: make the header transparent when not scrolled
-   so it overlays the hero image, then pull the hero up by the header height
-   so it truly starts at the top of the viewport with no gap.
+/* ── Mobile header ───────────────────────────────────────────────────────────
+   Keep the header solid white at all times on all devices, with dark logo and
+   dark toggle navigation button for a consistent and professional look.
    ─────────────────────────────────────────────────────────────────────────── */
 @media (max-width: 991px) {
-  /* Transparent header over hero — becomes solid on scroll */
+  /* Solid white header over hero */
   .header:not(.header-scrolled) {
-    background: transparent !important;
-    box-shadow: none !important;
+    background: #ffffff !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05) !important;
   }
 
-  /* Keep hamburger and logo readable on dark hero */
+  /* Keep hamburger and logo dark and readable on white header */
   .header:not(.header-scrolled) .mobile-nav-toggle {
-    color: #fff !important;
+    color: var(--nav-color) !important;
   }
 
   .header:not(.header-scrolled) .logo img {
-    filter: brightness(0) invert(1);
+    filter: none !important;
   }
 
-  /* Pull hero up to fill from viewport top — cancel the .main margin */
+  /* Adjust hero-premium height and spacing on mobile to sit cleanly below header */
   .hero-premium {
-    margin-top: -60px !important;
-    height: 100svh !important;
+    margin-top: 0 !important;
+    height: calc(100svh - 60px) !important;
     min-height: 520px !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
   }
 
-  /* Hero swiper fills the full pulled-up hero */
+  /* Hero swiper fills the hero */
   .hero-swiper {
     height: 100% !important;
     min-height: 520px !important;
   }
 
-  /* Push hero text content down so it clears the transparent header */
+  /* Push hero text content down so it clears the header */
   .hero-container {
-    padding-top: 80px !important;
-    padding-bottom: 60px !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
   }
 
   /* Smaller hero buttons on mobile */
@@ -7707,6 +7705,79 @@ html:not(.no-js) [data-aos].aos-animate {
 
   .hero-actions {
     gap: 0.75rem !important;
+  }
+}
+
+/* ── Enforce solid white header no matter what ────────────────────────────── */
+.header {
+  background-color: #ffffff !important;
+}
+
+.header .logo h1,
+.header .logo span {
+  color: var(--heading-color) !important;
+}
+
+.navmenu a,
+.navmenu a:focus {
+  color: var(--nav-color) !important;
+}
+
+.navmenu a:hover,
+.navmenu .active,
+.navmenu .active:focus {
+  color: var(--nav-hover-color) !important;
+}
+
+/* ── WhatsApp Floater circular button ─────────────────────────────────────── */
+.float-actions {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9999;
+}
+
+.float-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background-color: #25d366 !important; /* WhatsApp Green */
+  color: #ffffff !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45) !important;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  font-size: 28px !important;
+  text-decoration: none !important;
+  min-width: unset !important;
+  padding: 0 !important;
+}
+
+.float-action:hover {
+  transform: scale(1.1) translateY(-4px) !important;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.6) !important;
+  background-color: #20ba5a !important;
+  color: #ffffff !important;
+}
+
+.float-action i {
+  font-size: 28px !important;
+  line-height: 1 !important;
+}
+
+@media (max-width: 768px) {
+  .float-actions {
+    bottom: 20px;
+    right: 20px;
+  }
+  .float-action {
+    width: 48px;
+    height: 48px;
+    font-size: 24px !important;
+  }
+  .float-action i {
+    font-size: 24px !important;
   }
 }
 
