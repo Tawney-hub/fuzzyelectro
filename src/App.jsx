@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
 
 // Initialize AOS on every page change
 function ScrollToTopAndAOS() {
@@ -12,10 +11,15 @@ function ScrollToTopAndAOS() {
     window.scrollTo(0, 0);
     if (window.AOS) {
       window.AOS.init({
-        duration: 800,
-        easing: 'slide',
-        once: true
+        duration: 700,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 80,
+        delay: 0,
+        startEvent: 'DOMContentLoaded'
       });
+      // Refresh after scroll resets so in-viewport elements animate immediately
+      setTimeout(() => window.AOS && window.AOS.refresh(), 100);
     }
   }, [pathname]);
 
@@ -66,7 +70,12 @@ function App() {
           </Routes>
         </main>
         <Footer />
-        <ScrollToTop />
+        <div className="float-actions">
+          <a href="https://wa.me/263789566578" target="_blank" rel="noreferrer" className="float-action float-action--contact" aria-label="WhatsApp Fuzzy Electronics">
+            <i className="bi bi-whatsapp"></i>
+            <span>Get In Touch</span>
+          </a>
+        </div>
       </div>
     </Router>
   );

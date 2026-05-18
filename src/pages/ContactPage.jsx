@@ -21,7 +21,7 @@ const ContactPage = () => {
                   <i className="bi bi-geo-alt text-danger fs-3 me-3"></i>
                   <div>
                     <h5>Address</h5>
-                    <p>Suite 1, Nedlaw Complex, 202 Seke Road, Graniteside, Harare</p>
+                    <p>9 Belfast Road, Emerald Hill</p>
                   </div>
                 </div>
 
@@ -29,7 +29,8 @@ const ContactPage = () => {
                   <i className="bi bi-telephone text-danger fs-3 me-3"></i>
                   <div>
                     <h5>Call Us</h5>
-                    <p>+263 712 685 901 / +263 780 764 534</p>
+                    <p>+263 867 700 8879</p>
+                    <p className="mb-0">Landline: +263 867 708 879</p>
                   </div>
                 </div>
 
@@ -37,7 +38,7 @@ const ContactPage = () => {
                   <i className="bi bi-envelope text-danger fs-3 me-3"></i>
                   <div>
                     <h5>Email Us</h5>
-                    <p>sales@genixsolutions.co.zw</p>
+                    <p>marketing@fuzzy.co.zw</p>
                   </div>
                 </div>
                 

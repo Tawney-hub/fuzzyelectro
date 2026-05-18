@@ -11,10 +11,11 @@ const Footer = () => {
               <span className="sitename">Fuzzy Electronics</span>
             </Link>
             <div className="footer-contact pt-3">
-              <p>Suite 1, Nedlaw Complex</p>
-              <p>202 Seke Road, Graniteside, Harare</p>
-              <p className="mt-3"><strong>Phone:</strong> <span>+263 712 685 901</span></p>
-              <p><strong>Email:</strong> <span>sales@genixsolutions.co.zw</span></p>
+              <p>9 Belfast Road, Emerald Hill</p>
+              <p>Harare, Zimbabwe</p>
+              <p className="mt-3"><strong>Phone:</strong> <span>+263 867 700 8879</span></p>
+              <p><strong>Landline:</strong> <span>+263 867 708 879</span></p>
+              <p><strong>Email:</strong> <span>marketing@fuzzy.co.zw</span></p>
             </div>
             <div className="social-links d-flex mt-4">
               <a href="#"><i className="bi bi-facebook"></i></a>
@@ -25,8 +26,9 @@ const Footer = () => {
           <div className="col-lg-2 col-md-3 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/about">Projects</Link></li>
+              <li><Link to="/about">Team Members</Link></li>
               <li><Link to="/services">Services</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>
