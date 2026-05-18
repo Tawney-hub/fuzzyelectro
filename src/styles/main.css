@@ -7174,6 +7174,21 @@ html:not(.no-js) [data-aos].aos-animate {
   margin: 0;
 }
 
+/* Intro strip CTA buttons */
+.svc-intro-btn {
+  padding: 0.55rem 1.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (min-width: 992px) {
+  .svc-intro-btn {
+    padding: 0.75rem 2rem;
+    font-size: 0.9rem;
+  }
+}
+
 /* Grid section */
 .svc-grid-section {
   background: #f6f7fa;
@@ -7780,4 +7795,391 @@ html:not(.no-js) [data-aos].aos-animate {
     font-size: 24px !important;
   }
 }
+
+/* ── Mobile nav: clean full-screen centered overlay ──────────────────────────
+   The navmenu CONTAINER is the overlay (not the ul), so brand + links + socials
+   all render together. ul becomes a plain static list inside the overlay.
+   ─────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 991px) {
+
+  /* Hide navmenu when closed */
+  .navmenu {
+    display: none !important;
+    position: static !important;
+    background: none !important;
+  }
+
+  /* Open: navmenu becomes the full-screen overlay */
+  .mobile-nav-active .navmenu {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: fixed !important;
+    inset: 0 !important;
+    background: #fff !important;
+    z-index: 9998 !important;
+    padding: 40px 32px 32px !important;
+    overflow: hidden !important;
+    animation: mnavFadeIn 0.28s ease !important;
+  }
+
+  @keyframes mnavFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* ul: static list inside the overlay */
+  .navmenu ul {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  /* Brand block */
+  .mobile-nav-brand {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    padding-bottom: 20px !important;
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid #e8e8e8 !important;
+  }
+
+  .mobile-nav-brand img {
+    max-height: 52px !important;
+    filter: none !important;
+    margin-bottom: 8px !important;
+  }
+
+  .mobile-nav-brand p {
+    color: #aaa !important;
+    font-size: 11px !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+  }
+
+  /* Nav list items */
+  .navmenu li {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 0 !important;
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  .mobile-nav-active .navmenu li {
+    animation: mnavItemIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
+  }
+
+  @keyframes mnavItemIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .mobile-nav-active .navmenu li:nth-child(1) { animation-delay: 0.08s; }
+  .mobile-nav-active .navmenu li:nth-child(2) { animation-delay: 0.14s; }
+  .mobile-nav-active .navmenu li:nth-child(3) { animation-delay: 0.20s; }
+  .mobile-nav-active .navmenu li:nth-child(4) { animation-delay: 0.26s; }
+  .mobile-nav-active .navmenu li:nth-child(5) { animation-delay: 0.32s; }
+
+  /* Link style */
+  .navmenu a,
+  .navmenu a:focus {
+    display: block !important;
+    text-align: center !important;
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase !important;
+    color: #1e232b !important;
+    padding: 14px 0 !important;
+    width: 100% !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    transition: color 0.2s !important;
+    white-space: nowrap !important;
+  }
+
+  .navmenu li:first-child a { border-top: 1px solid #f0f0f0 !important; }
+
+  /* Active & hover — old navmenu (kept for safety) */
+  .navmenu a:hover,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: #7c151d !important;
+    background: none !important;
+  }
+
+  /* Socials */
+  .mobile-nav-socials {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    margin-top: 0 !important;
+    padding-top: 20px !important;
+    border-top: 1px solid #e8e8e8 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .mobile-nav-socials .social-links {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 32px !important;
+    align-items: center !important;
+  }
+
+  .mobile-nav-socials .social-links a {
+    display: inline-flex !important;
+    font-size: 20px !important;
+    color: #1a1d22 !important;
+    padding: 0 !important;
+    border-bottom: none !important;
+    width: auto !important;
+    transition: color 0.2s !important;
+  }
+
+  .mobile-nav-socials .social-links a:hover {
+    color: #7c151d !important;
+  }
+
+  /* X close button */
+  .mobile-nav-active .mobile-nav-toggle {
+    position: fixed !important;
+    top: 18px !important;
+    right: 20px !important;
+    z-index: 10002 !important;
+    color: #1a1d22 !important;
+    font-size: 26px !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   DESKTOP NAV LINKS
+   ═══════════════════════════════════════════════════════════════════════════ */
+.desktop-nav-link {
+  font-family: var(--heading-font);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #1e232b;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+
+.desktop-nav-link:hover {
+  color: #7c151d;
+  background: rgba(124, 21, 29, 0.06);
+}
+
+.desktop-nav-link.active {
+  color: #7c151d;
+  font-weight: 700;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   ANIMATED HAMBURGER BUTTON
+   ═══════════════════════════════════════════════════════════════════════════ */
+.hamburger-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 10001;
+  position: relative;
+}
+
+.hamburger-btn span {
+  display: block;
+  height: 2px;
+  background: #1e232b;
+  border-radius: 2px;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s, width 0.3s;
+  transform-origin: center;
+}
+
+.hamburger-btn span:nth-child(1) { width: 24px; }
+.hamburger-btn span:nth-child(2) { width: 18px; }
+.hamburger-btn span:nth-child(3) { width: 24px; }
+
+/* Animate to X when open */
+.hamburger-btn.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  width: 24px;
+}
+.hamburger-btn.is-open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.hamburger-btn.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  width: 24px;
+}
+
+/* White spans on transparent hero header */
+.header:not(.header-scrolled) .hamburger-btn span {
+  background: #fff;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   MOBILE NAV OVERLAY (new structure)
+   ═══════════════════════════════════════════════════════════════════════════ */
+.mobile-nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 10000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 32px 32px;
+}
+
+.mobile-nav-overlay.is-open {
+  display: flex;
+  animation: overlayFadeIn 0.3s ease;
+}
+
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Dark scrim behind the overlay (for potential future drawer use) */
+.mobile-nav-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+
+/* Close button */
+.mobile-nav-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #1e232b;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.mobile-nav-close:hover { color: #7c151d; }
+
+/* Brand */
+.mobile-nav-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.mobile-nav-brand img {
+  max-height: 50px;
+  margin-bottom: 8px;
+}
+
+.mobile-nav-brand p {
+  font-size: 10.5px;
+  color: #aaa;
+  margin: 0;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+}
+
+/* Links list */
+.mobile-nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 300px;
+}
+
+.mobile-nav-links li {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: mnavLinkIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(0.06s + var(--i, 0) * 0.07s);
+}
+
+@keyframes mnavLinkIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.mobile-nav-links a {
+  display: block;
+  text-align: center;
+  font-family: var(--heading-font);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #1e232b;
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f0f0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.mobile-nav-links li:first-child a {
+  border-top: 1px solid #f0f0f0;
+}
+
+.mobile-nav-links a:hover,
+.mobile-nav-links a.active {
+  color: #7c151d;
+}
+
+/* Socials footer */
+.mobile-nav-footer {
+  display: flex;
+  gap: 28px;
+  margin-top: 0;
+  padding-top: 20px;
+  border-top: 1px solid #ebebeb;
+  width: 100%;
+  max-width: 300px;
+  justify-content: center;
+}
+
+.mobile-nav-footer a {
+  font-size: 20px;
+  color: #1e232b;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.mobile-nav-footer a:hover { color: #7c151d; }
 

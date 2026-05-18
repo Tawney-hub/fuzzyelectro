@@ -120,11 +120,11 @@ const ServicesPage = () => {
                 Smart Security • Smart Solutions • Trusted Technology
               </p>
             </div>
-            <div className="col-lg-5 text-lg-end">
-              <Link to="/contact" className="btn btn-danger px-5 py-3 rounded-pill me-2">
+            <div className="col-lg-5 text-lg-end mt-3 mt-lg-0 d-flex flex-wrap gap-2 justify-content-lg-end">
+              <Link to="/contact" className="btn btn-danger svc-intro-btn rounded-pill">
                 Request a Quote
               </Link>
-              <Link to="/contact" className="btn btn-outline-light px-5 py-3 rounded-pill">
+              <Link to="/contact" className="btn btn-outline-light svc-intro-btn rounded-pill">
                 Contact Us
               </Link>
             </div>
