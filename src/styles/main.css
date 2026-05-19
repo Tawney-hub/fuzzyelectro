@@ -8183,3 +8183,758 @@ html:not(.no-js) [data-aos].aos-animate {
 
 .mobile-nav-footer a:hover { color: #7c151d; }
 
+
+/* ╔══════════════════════════════════════════════════════════════════════════╗
+   ║  WORLD-CLASS MOBILE NAV — "PRECISION COMMAND"                          ║
+   ║  White canvas · editorial numbering · red accent strip · stagger slide ║
+   ╚══════════════════════════════════════════════════════════════════════════╝ */
+
+/* ── Overlay container ───────────────────────────────────────────────────── */
+.mobile-nav-active .navmenu {
+  background: #ffffff !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  animation: mnav-reveal 0.4s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+@keyframes mnav-reveal {
+  from { opacity: 0; transform: translateY(-12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Left red accent bar */
+.mobile-nav-active .navmenu::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 10% !important;
+  bottom: 10% !important;
+  width: 3px !important;
+  background: linear-gradient(180deg, transparent, #7c151d 25%, #7c151d 75%, transparent) !important;
+  border-radius: 0 2px 2px 0 !important;
+  z-index: 0 !important;
+}
+
+/* Giant decorative ghost letter */
+.mobile-nav-active .navmenu::after {
+  content: 'FE' !important;
+  position: absolute !important;
+  right: -0.05em !important;
+  bottom: -0.15em !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 28vw !important;
+  font-weight: 900 !important;
+  color: rgba(124, 21, 29, 0.04) !important;
+  line-height: 1 !important;
+  pointer-events: none !important;
+  user-select: none !important;
+  z-index: 0 !important;
+}
+
+/* ── Brand / logo block ──────────────────────────────────────────────────── */
+.mobile-nav-active .navmenu .mobile-nav-brand {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  padding: 0 36px 28px !important;
+  margin: 0 !important;
+  border-bottom: 1px solid rgba(0,0,0,0.07) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.mobile-nav-active .navmenu .mobile-nav-brand img {
+  max-height: 34px !important;
+  filter: none !important;
+  margin-bottom: 8px !important;
+}
+
+.mobile-nav-active .navmenu .mobile-nav-brand p {
+  font-size: 9.5px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  color: rgba(0,0,0,0.35) !important;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+/* ── Nav links list ──────────────────────────────────────────────────────── */
+.mobile-nav-active .navmenu ul {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  position: relative !important;
+  z-index: 2 !important;
+  padding: 28px 36px !important;
+  margin: 0 !important;
+  width: 100% !important;
+  counter-reset: mnav !important;
+  background: none !important;
+  box-shadow: none !important;
+  inset: auto !important;
+}
+
+/* ── Each link item ──────────────────────────────────────────────────────── */
+.mobile-nav-active .navmenu li {
+  counter-increment: mnav !important;
+  width: 100% !important;
+  padding: 0 !important;
+  animation: mnav-item-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both !important;
+}
+
+@keyframes mnav-item-in {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.mobile-nav-active .navmenu li:nth-child(1) { animation-delay: 0.18s !important; }
+.mobile-nav-active .navmenu li:nth-child(2) { animation-delay: 0.24s !important; }
+.mobile-nav-active .navmenu li:nth-child(3) { animation-delay: 0.30s !important; }
+.mobile-nav-active .navmenu li:nth-child(4) { animation-delay: 0.36s !important; }
+.mobile-nav-active .navmenu li:nth-child(5) { animation-delay: 0.42s !important; }
+
+/* ── Link style ──────────────────────────────────────────────────────────── */
+.mobile-nav-active .navmenu li a,
+.mobile-nav-active .navmenu li a:focus {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0 !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: clamp(0.95rem, 4vw, 1.15rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: #1a1d24 !important;
+  padding: 13px 0 !important;
+  border-bottom: 1px solid rgba(0,0,0,0.07) !important;
+  text-decoration: none !important;
+  width: 100% !important;
+  text-align: center !important;
+  transition: color 0.2s !important;
+  position: relative !important;
+  background: none !important;
+}
+
+/* No counter, no arrow */
+.mobile-nav-active .navmenu li a::before,
+.mobile-nav-active .navmenu li a::after {
+  display: none !important;
+}
+
+.mobile-nav-active .navmenu li a:hover {
+  color: #7c151d !important;
+}
+
+/* Active link */
+.mobile-nav-active .navmenu li a.active,
+.mobile-nav-active .navmenu li a.active:focus {
+  color: #7c151d !important;
+}
+
+/* ── Socials footer ──────────────────────────────────────────────────────── */
+.mobile-nav-active .navmenu .mobile-nav-socials {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 20px 36px 28px !important;
+  margin: 0 !important;
+  border-top: 1px solid rgba(0,0,0,0.07) !important;
+  width: 100% !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.mobile-nav-active .navmenu .mobile-nav-socials .social-links {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 10px !important;
+  align-items: center !important;
+}
+
+.mobile-nav-active .navmenu .mobile-nav-socials .social-links a {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  border: 1.5px solid rgba(0,0,0,0.15) !important;
+  border-bottom: 1.5px solid rgba(0,0,0,0.15) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 14px !important;
+  color: #1a1d24 !important;
+  padding: 0 !important;
+  text-align: center !important;
+  transition: border-color 0.2s, color 0.2s, background 0.2s !important;
+  text-decoration: none !important;
+}
+
+.mobile-nav-active .navmenu .mobile-nav-socials .social-links a:hover {
+  border-color: #7c151d !important;
+  color: #7c151d !important;
+}
+
+/* ── Hamburger / close toggle ────────────────────────────────────────────── */
+.mobile-nav-toggle {
+  font-size: 24px !important;
+  cursor: pointer !important;
+  line-height: 1 !important;
+  transition: color 0.2s, transform 0.3s !important;
+  color: #1a1d24 !important;
+  z-index: 10002 !important;
+  position: relative !important;
+}
+
+.header:not(.header-scrolled) .mobile-nav-toggle {
+  color: #fff !important;
+}
+
+.mobile-nav-active .mobile-nav-toggle {
+  position: fixed !important;
+  top: 18px !important;
+  right: 20px !important;
+  color: #1a1d24 !important;
+  z-index: 10002 !important;
+  transform: rotate(90deg) !important;
+}
+
+
+/* ╔══════════════════════════════════════════════════════════════════════════╗
+   ║  CONTACT PAGE — MOBILE REFINEMENTS                                     ║
+   ║  Surgical precision: compact info chips, clean form, full-bleed CTA    ║
+   ╚══════════════════════════════════════════════════════════════════════════╝ */
+
+@media (max-width: 991px) {
+
+  /* ── Section breathing room ─────────────────────────────────────────── */
+  .contact.section {
+    padding-top: 32px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .contact .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* ── Info wrap card ─────────────────────────────────────────────────── */
+  .contact .info-wrap {
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+  }
+
+  /* ── Each info item — horizontal chip ──────────────────────────────── */
+  .contact .info-item {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+    margin-bottom: 0 !important;
+    padding: 14px 16px !important;
+    background: #fff !important;
+    border-radius: 12px !important;
+    border-left: 3px solid #7c151d !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06) !important;
+    margin-bottom: 10px !important;
+  }
+
+  .contact .info-item i {
+    font-size: 1.1rem !important;
+    margin: 0 !important;
+    margin-top: 2px !important;
+    flex-shrink: 0 !important;
+    color: #7c151d !important;
+  }
+
+  .contact .info-item h5 {
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    color: #9a9fae !important;
+    margin-bottom: 2px !important;
+  }
+
+  .contact .info-item p {
+    font-size: 0.88rem !important;
+    margin-bottom: 0 !important;
+    color: #1e232b !important;
+    line-height: 1.5 !important;
+  }
+
+  /* ── Map — compact height ───────────────────────────────────────────── */
+  .contact iframe {
+    height: 160px !important;
+    border-radius: 10px !important;
+    margin-top: 10px !important;
+  }
+
+  /* ── Form card ──────────────────────────────────────────────────────── */
+  .contact .php-email-form {
+    padding: 20px 16px !important;
+    border-radius: 16px !important;
+    border: none !important;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08) !important;
+  }
+
+  .contact .php-email-form .row {
+    --bs-gutter-y: 1rem !important;
+  }
+
+  /* ── Labels ─────────────────────────────────────────────────────────── */
+  .contact .php-email-form label {
+    font-size: 0.7rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    color: #9a9fae !important;
+    padding-bottom: 4px !important;
+    display: block !important;
+  }
+
+  /* ── Inputs & textarea ──────────────────────────────────────────────── */
+  .contact .php-email-form .form-control {
+    border: none !important;
+    border-bottom: 1.5px solid #e0e0e6 !important;
+    border-radius: 0 !important;
+    padding: 8px 0 !important;
+    font-size: 0.92rem !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    transition: border-color 0.2s !important;
+    color: #1e232b !important;
+  }
+
+  .contact .php-email-form .form-control:focus {
+    border-bottom-color: #7c151d !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+
+  .contact .php-email-form textarea.form-control {
+    rows: 4 !important;
+    min-height: 100px !important;
+    resize: none !important;
+  }
+
+  /* ── Submit button — full-width pill with gradient ──────────────────── */
+  .contact .php-email-form button[type="submit"] {
+    width: 100% !important;
+    padding: 14px !important;
+    border-radius: 50px !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    background: linear-gradient(135deg, #7c151d 0%, #a01e28 100%) !important;
+    border: none !important;
+    color: #fff !important;
+    box-shadow: 0 6px 20px rgba(124, 21, 29, 0.35) !important;
+    transition: box-shadow 0.2s, transform 0.2s !important;
+  }
+
+  .contact .php-email-form button[type="submit"]:active {
+    transform: scale(0.98) !important;
+    box-shadow: 0 3px 10px rgba(124, 21, 29, 0.25) !important;
+  }
+
+  /* ── Gap between info block and form ───────────────────────────────── */
+  .contact .row.gy-4 > [class*="col-"]:last-child {
+    margin-top: 4px !important;
+  }
+}
+
+
+/* ╔══════════════════════════════════════════════════════════════════════════╗
+   ║  FOOTER — MOBILE REFINEMENTS                                           ║
+   ║  Compact, editorial, two-column links grid, full-bleed CTA             ║
+   ╚══════════════════════════════════════════════════════════════════════════╝ */
+
+@media (max-width: 991px) {
+
+  /* ── Red top accent border ──────────────────────────────────────────── */
+  .footer {
+    border-top: 3px solid #7c151d !important;
+  }
+
+  /* ── Footer top padding ─────────────────────────────────────────────── */
+  .footer-top {
+    padding: 28px 0 20px !important;
+  }
+
+  .footer-top .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* ── Row: tighter gap between columns ──────────────────────────────── */
+  .footer-top .row {
+    --bs-gutter-y: 0 !important;
+    gap: 0 !important;
+  }
+
+  /* ── Brand / About section ──────────────────────────────────────────── */
+  .footer-about {
+    padding-bottom: 20px !important;
+    margin-bottom: 20px !important;
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+  }
+
+  .footer-about .sitename {
+    font-size: 18px !important;
+    letter-spacing: 0.03em !important;
+  }
+
+  .footer-contact {
+    padding-top: 8px !important;
+  }
+
+  .footer-contact p {
+    font-size: 0.8rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 2px !important;
+  }
+
+  .footer-contact p.mt-3 {
+    margin-top: 8px !important;
+  }
+
+  .footer-about .social-links {
+    margin-top: 14px !important;
+    gap: 12px !important;
+  }
+
+  .footer-about .social-links a {
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 15px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* ── Link columns — side by side 2-column grid ──────────────────────── */
+  .footer-top .row > [class*="col"]:has(.footer-links-grid),
+  .footer-links-grid {
+    width: 50% !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+
+  /* Wrap the two link columns into a flex row */
+  .footer-top .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+
+  .footer-links-grid {
+    padding-bottom: 20px !important;
+  }
+
+  .footer-links-grid h5 {
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+    margin-bottom: 10px !important;
+    padding-bottom: 6px !important;
+    border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+  }
+
+  .footer-links-grid ul {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .footer-links-grid ul li {
+    margin-bottom: 6px !important;
+  }
+
+  .footer-links-grid ul li a {
+    font-size: 0.82rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* ── CTA section ────────────────────────────────────────────────────── */
+  .footer-cta {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    padding-top: 20px !important;
+    border-top: 1px solid rgba(255,255,255,0.08) !important;
+  }
+
+  .footer-cta h5 {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+    margin-bottom: 6px !important;
+  }
+
+  /* Hide redundant tagline on mobile */
+  .footer-cta .tagline {
+    display: none !important;
+  }
+
+  /* Full-width pill CTA button */
+  .footer-cta .btn-outline,
+  .footer-cta a.btn-outline {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 12px 20px !important;
+    border-radius: 50px !important;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    margin-top: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ── Footer bottom ──────────────────────────────────────────────────── */
+  .footer-bottom {
+    padding: 14px 0 !important;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 4px !important;
+  }
+
+  .footer-bottom-content p {
+    font-size: 0.72rem !important;
+    margin: 0 !important;
+    line-height: 1.5 !important;
+  }
+
+  .footer-bottom-content .credits {
+    font-size: 0.68rem !important;
+    opacity: 0.6 !important;
+  }
+}
+
+
+/* ╔══════════════════════════════════════════════════════════════════════════╗
+   ║  FOOTER — MOBILE REDESIGN v2                                           ║
+   ║  Compact editorial • name+socials one row • 2-col links grid           ║
+   ╚══════════════════════════════════════════════════════════════════════════╝ */
+
+@media (max-width: 991px) {
+
+  /* ── Red accent top border ────────────────────────────────────────────── */
+  .footer {
+    border-top: 2px solid #7c151d !important;
+  }
+
+  .footer-top {
+    padding: 20px 0 14px !important;
+  }
+
+  .footer-top .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Row: explicit flex so 50% widths on link cols work */
+  .footer-top .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    row-gap: 0 !important;
+    column-gap: 0 !important;
+  }
+
+  /* ── Brand section ────────────────────────────────────────────────────── */
+  .footer-about {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 14px !important;
+    border-bottom: 1px solid rgba(255,255,255,0.09) !important;
+    /* flex container so logo+socials share a row */
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 0 !important;
+  }
+
+  /* Logo — grows to fill, stays left */
+  .footer-about > a.logo,
+  .footer-about a.logo {
+    flex: 1 1 auto !important;
+    order: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .footer-about .sitename {
+    font-size: 15px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1 !important;
+  }
+
+  /* Social icons — right side, same row as logo */
+  .footer-about .social-links {
+    order: 2 !important;
+    flex: 0 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-top: 0 !important;
+  }
+
+  .footer-about .social-links a {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 13px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+  }
+
+  /* Contact info — full width, below logo+socials row */
+  .footer-about .footer-contact {
+    order: 3 !important;
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    padding-top: 9px !important;
+    padding-bottom: 0 !important;
+  }
+
+  .footer-contact p {
+    font-size: 0.72rem !important;
+    line-height: 1.45 !important;
+    margin-bottom: 1px !important;
+  }
+
+  .footer-contact p.mt-3 {
+    margin-top: 6px !important;
+  }
+
+  /* ── Link columns — genuinely side by side ────────────────────────────── */
+  .footer-links-grid {
+    width: 50% !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    padding: 14px 10px 14px 0 !important;
+    margin: 0 !important;
+  }
+
+  .footer-links-grid + .footer-links-grid {
+    padding: 14px 0 14px 10px !important;
+    border-left: 1px solid rgba(255,255,255,0.07) !important;
+  }
+
+  .footer-links-grid h5 {
+    font-size: 0.6rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    margin-bottom: 8px !important;
+    padding-bottom: 5px !important;
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+    opacity: 0.55 !important;
+  }
+
+  .footer-links-grid ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .footer-links-grid ul li {
+    margin-bottom: 4px !important;
+  }
+
+  .footer-links-grid ul li a {
+    font-size: 0.76rem !important;
+    line-height: 1.35 !important;
+    display: block !important;
+    padding: 2px 0 !important;
+    text-decoration: none !important;
+  }
+
+  /* ── CTA — button only, no heading or tagline ─────────────────────────── */
+  .footer-cta {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    padding: 12px 0 4px !important;
+    border-top: 1px solid rgba(255,255,255,0.09) !important;
+  }
+
+  .footer-cta h5,
+  .footer-cta .tagline {
+    display: none !important;
+  }
+
+  .footer-cta .mt-4 {
+    margin-top: 0 !important;
+  }
+
+  .footer-cta a.btn-outline,
+  .footer-cta .btn-outline {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 11px 20px !important;
+    border-radius: 50px !important;
+    font-size: 0.73rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.13em !important;
+    text-transform: uppercase !important;
+    background: linear-gradient(135deg, #7c151d 0%, #a82028 100%) !important;
+    border: none !important;
+    color: #fff !important;
+    box-shadow: 0 4px 18px rgba(124,21,29,0.45) !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ── Footer bottom ────────────────────────────────────────────────────── */
+  .footer-bottom {
+    padding: 10px 0 !important;
+  }
+
+  .footer-bottom .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 2px !important;
+  }
+
+  .footer-bottom-content p {
+    font-size: 0.66rem !important;
+    margin: 0 !important;
+    line-height: 1.5 !important;
+  }
+
+  .footer-bottom-content .credits {
+    font-size: 0.61rem !important;
+    opacity: 0.45 !important;
+  }
+}
