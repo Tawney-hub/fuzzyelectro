@@ -388,16 +388,68 @@ h6 {
 }
 
 @media (max-width: 1200px) {
+  .header .container-fluid.px-3 {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
   .header .logo {
     order: 1;
+    flex: 0 0 auto;
+    max-width: 220px;
   }
 
   .header .header-social-links {
     order: 2;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 
   .header .navmenu {
     order: 3;
+    flex: 1 1 auto;
+    min-width: 0;
+    margin-left: 0;
+  }
+
+  .navmenu ul {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.25rem 0;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header .container-fluid.px-3 {
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .header .logo {
+    max-width: 180px;
+  }
+
+  .navmenu ul {
+    justify-content: center;
+    gap: 0.2rem 0;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .header-topstrip,
+  .header .header-social-links {
+    display: none;
   }
 }
 
